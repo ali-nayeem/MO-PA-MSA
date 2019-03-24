@@ -1,24 +1,6 @@
-# Many-objective analysis for solving Phylogeny-aware Multiple Sequence Alignment
+# A 'Phylogeny-aware' Multi-objective Optimization Approach for Computing MSA
 
-## Build with dependencies
-
-```
-mvn clean compile assembly:single
-```
-## Execute a class from inside root
-
-```
-java -cp ./target/JMetalMSA1.2-1.0-SNAPSHOT-jar-with-dependencies.jar org.uma.jmetalmsa.runner.TestObjetivesMAN
-```
-
-## Hard reset
-Setting your branch to exactly match the remote branch can be done in two steps:
-```
-git fetch origin
-git reset --hard origin/master
-```
-
-# Inherited with gratitude from jMetalMSA: a framework for solving Multiple Sequence Alignment problems with Multi-Objective metaheuristics
+This is a JAVA Netbeans project based on JMetalMSA (https://github.com/jMetal/jMetalMSA) where we added necessary codes to compute multiple sequence alignment (MSA) by applying NSGA-II and NSGA-III. In addition, here we keep the datasets and results used for our research works. This work was accepted in the GECCO-2019 conference.
 
 jMetalMSA is an Open source software tool aimed at solving multiple sequence alignment (MSA) problems by using multi-objective metaheuristics. It is based on the jMetal multi-objective framework, which is extended with an encoding for representing MSA solutions. 
 
@@ -82,22 +64,7 @@ Once cloned, you can compile the software and generate a jar file with the follo
 mvn package
 ```
 This sentence will generate a directory called `target` which will contain a file called `jmetalmsa-1.0-SNAPSHOT-jar-with-dependencies.jar`
-
-## Download PDB files and Generation of the Strike Contact Matrix files
-
-jMetalMSA provides a utility to download the PDB structures files from the [Protein Data Bank](http://www.rcsb.org) and generate the Strike Contact Matrix (with the utility [STRIKE Contact Matrix Generator](https://github.com/cristianzambrano/strikeContactGenerator)) automatically. 
-
-To execute this utility and get all the structural information requeried by STRIKE measure, run this command:
-
-````
-java -cp target/jmetalmsa-1.0-SNAPSHOT-jar-with-dependencies.jar org.uma.jmetalmsa.strike.GenerateStructuralInformation sequencesFileName outputDirectory pathToStrike_contactgenerator
-```
-
-* sequencesFileName: the filename of the sequences dataset (in FASTA Format). The names of the sequences must be correctly defined, because, the four first letters will be the `Sequence Key` or `PDB ID` to search the Structural Information (PDB) into the database of the Protein Data Bank.
-* outputDirectory: The Path where all files (PDB's (*.pdb) and Strike Contact Matrix (*.contacts)) will be save.
-* pathToStrike_contactgenerator: The full path of the  STRIKE Contact Matrix Generator executable ,for instance: `/home/jMetalMSA/strike/bin/strike_pdbcontactsgenerator`.
-
-The Contacts files for each sequence of the dataset will be created into the outputDirectory. jMetalMSA will read the contact files to evaluate the STRIKE metric of the aligments. 
+ 
 
 ## Runing jMetalMSA
 

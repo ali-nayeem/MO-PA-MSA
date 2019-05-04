@@ -1,6 +1,6 @@
 # A 'Phylogeny-aware' Multi-objective Optimization Approach for Computing MSA
 
-This is a JAVA Netbeans project based on JMetalMSA (https://github.com/jMetal/jMetalMSA) where we added necessary codes to compute multiple sequence alignment (MSA) by applying NSGA-II and NSGA-III. In addition, here we keep the datasets and results used for our research works. This work was accepted in the GECCO-2019 conference.
+This is a JAVA Netbeans project based on JMetalMSA (https://github.com/jMetal/jMetalMSA) where we added necessary codes to compute multiple sequence alignment (MSA) by applying NSGA-II and NSGA-III. In addition, here we keep the datasets and results used for our research works. 
 
 jMetalMSA is an Open source software tool aimed at solving multiple sequence alignment (MSA) problems by using multi-objective metaheuristics. It is based on the jMetal multi-objective framework, which is extended with an encoding for representing MSA solutions. 
 
